@@ -377,7 +377,7 @@ void servConn(int port) {
           	}
           }*/
 
-          // token is an mp4 video file
+          // token is an mp4 video file (needs to be fixed, hangs forever)
           else if (isMP4(tok)) {
           	FILE *ptr = fopen(tok, "rb");
           	fseek(ptr, 0, SEEK_END);
@@ -405,9 +405,7 @@ void servConn(int port) {
               write(new_sd, buf, strlen(buf));
               printf("henlo\n");
             }
-            printf("yes\n");
             pclose(out);
-            printf("skate fast eat ass\n");
           }
 
           // Token is a txt file
